@@ -13,6 +13,7 @@ import {
   CoreStart,
   DEFAULT_APP_CATEGORIES,
   Plugin,
+  DEFAULT_WORKSPACE_TEMPLATES,
 } from '../../../src/core/public';
 import { CREATE_TAB_PARAM, CREATE_TAB_PARAM_KEY, TAB_CHART_ID } from '../common/constants/explorer';
 
@@ -147,6 +148,7 @@ export class ObservabilityPlugin
       category: OBSERVABILITY_APP_CATEGORIES.observability,
       order: observabilityApplicationsPluginOrder,
       mount: appMountWithStartPage('applications'),
+      workspaceTemplate: [DEFAULT_WORKSPACE_TEMPLATES.observability],
     });
 
     core.application.register({
@@ -155,6 +157,7 @@ export class ObservabilityPlugin
       category: OBSERVABILITY_APP_CATEGORIES.observability,
       order: observabilityLogsPluginOrder,
       mount: appMountWithStartPage('logs'),
+      workspaceTemplate: [DEFAULT_WORKSPACE_TEMPLATES.observability],
     });
 
     core.application.register({
@@ -163,6 +166,7 @@ export class ObservabilityPlugin
       category: OBSERVABILITY_APP_CATEGORIES.observability,
       order: observabilityMetricsPluginOrder,
       mount: appMountWithStartPage('metrics'),
+      workspaceTemplate: [DEFAULT_WORKSPACE_TEMPLATES.observability],
     });
 
     core.application.register({
@@ -171,6 +175,7 @@ export class ObservabilityPlugin
       category: OBSERVABILITY_APP_CATEGORIES.observability,
       order: observabilityTracesPluginOrder,
       mount: appMountWithStartPage('traces'),
+      workspaceTemplate: [DEFAULT_WORKSPACE_TEMPLATES.observability],
     });
 
     core.application.register({
@@ -179,6 +184,7 @@ export class ObservabilityPlugin
       category: OBSERVABILITY_APP_CATEGORIES.observability,
       order: observabilityNotebookPluginOrder,
       mount: appMountWithStartPage('notebooks'),
+      workspaceTemplate: [DEFAULT_WORKSPACE_TEMPLATES.observability],
     });
 
     core.application.register({
@@ -187,6 +193,7 @@ export class ObservabilityPlugin
       category: OBSERVABILITY_APP_CATEGORIES.observability,
       order: observabilityPanelsPluginOrder,
       mount: appMountWithStartPage('dashboards'),
+      workspaceTemplate: [DEFAULT_WORKSPACE_TEMPLATES.observability],
     });
 
     core.application.register({
